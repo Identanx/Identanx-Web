@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+main{
+  height: 100vh;
+}
+
+main nav{
+  background: #6C63FF;
+}
+
+main nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main nav .navegation{
+  display: inline-flex;
+  padding: 10px;
+}
+
+main nav .menu-burger{
+  display: none;
+}
+
+main nav .navegation.left li{
+  margin-left: 30px;
+}
+
+main nav .navegation.rigth li{
+  margin-right: 30px;
+}
+
+main nav .navegation li{
+  list-style: none;
+}
+
+main nav .navegation li a{
+  text-decoration: none;
+  color: #FFF9FB;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+main nav .navegation img{
+  width: 50px;
+}
+
+main .main{
+  background: linear-gradient(328.72deg, #FEFEFE 29.76%, #6C63FF 104.12%);
+  height: 100%;
+}
+
+main .main h1{
+  padding: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 4em;
+}
+
+main .main .content{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+main .main .content img{
+  width: 50%;
+}
+
+@media (max-width: 700px) {
+  main nav .navegation.left,
+  main nav .navegation.rigth{
+    display: none;
+  }
+
+  main nav .navegation.center{
+    margin-left: 30px;
+  }
+
+  main nav .menu-burger{
+    display: inline-flex;
+    margin-right: 30px;
+  }
+}
