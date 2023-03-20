@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INTURE</title>
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 </head>
 <body>
   <main>
@@ -76,8 +77,38 @@
   </section>
   <section id="project">
     <h3>Proyectos</h3>
-    <div>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="assets/ADA.png" alt="">
+          <div class="containerText">
+            <div class="text">
+              <h4>ADA</h4>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci,  recusandae?</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide"><img src="assets/CEJUV.png" alt="">
+          <div class="containerText">
+            <div class="text">
+              <h4>CEJUV</h4>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci,  recusandae?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination color-purple"></div>
 
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev color-purple"></div>
+      <div class="swiper-button-next color-purple"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar color-purple"></div>
     </div>
   </section>
   <footer id="contact">
@@ -90,4 +121,36 @@
     </div>
   </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  speed: 400,
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+
+  autoplay: {
+    delay: 5000,
+  }, 
+
+});
+</script>
+
 </html>
