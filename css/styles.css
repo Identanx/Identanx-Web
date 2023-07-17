@@ -31,6 +31,10 @@ main nav .menu-burger{
   display: none;
 }
 
+main nav .navegation-burger{
+  display: none;
+}
+
 main nav .navegation.left li{
   margin-left: 30px;
 }
@@ -145,6 +149,7 @@ section .card{
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 1;
   width: 320px;
   height: 500px;
   margin: 30px 20px;
@@ -158,6 +163,7 @@ section .card .card-img{
   width: 100%;
   position: absolute;
   top: 0;
+  z-index: 2;
   border-bottom: #6C63FF solid thick;
 }
 
@@ -169,6 +175,7 @@ section .card .card-img img{
 
 section .card .card-content{
   position: absolute;
+  z-index: 2;
   top: 280px;
 }
 
@@ -217,7 +224,7 @@ section .card .text{
 
 .swiper .containerText{ 
   position: fixed;
-  z-index: 1000;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   height: 30%;
@@ -264,6 +271,7 @@ footer .links{
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(11.1px);
   position: relative;
+  z-index: 2;
   width: 800px; 
 }
 
@@ -281,6 +289,12 @@ footer .links a img{
 }
 
 @media (max-width: 800px) {
+  nav{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
   main nav .navegation.left,
   main nav .navegation.rigth{
     display: none;
@@ -293,6 +307,91 @@ footer .links a img{
   main nav .menu-burger{
     display: inline-flex;
     margin-right: 30px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  main nav .menu-burger.closed{
+    background: url('../assets/menu-burger.svg') no-repeat;
+  }
+
+  main nav .menu-burger.opened{
+    background: url('../assets/close.svg') no-repeat center;
+  }
+
+  main nav .navegation-burger{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    top: 68px;  
+    background-color: #6C63FF;
+    transition: 0.5s;
+  }
+
+  main nav .navegation-burger.closed{
+    left: 100%;
+  }
+  
+  main nav .navegation-burger.opened{
+    left: 0;
+  }
+
+  .navegation-burger.opened .content-navegation{
+    position: relative;
+  }
+
+  .content-navegation li{
+    list-style: none;
+    padding: 20px;
+    position: relative;
+    z-index: 20;
+  }
+
+  .content-navegation li a{
+    text-decoration: none;
+    color: #FEFEFE;
+    font-size: 3rem;
+  }
+
+  .content-navegation span{
+    opacity: 0;
+    position: absolute;
+    top: 33%;
+    width: 100%;
+    font-size: 8rem;  
+    color: #FEFEFE;
+    font-weight: 200;
+    font-style: italic;
+    transition: 0.5s;
+    z-index: 10;
+  }
+
+  .content-navegation li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: 0.5s;
+    background-color:#FEFEFE;
+  }
+
+  .content-navegation li:hover a::after{
+    width: 100%;
+  }
+
+  .content-navegation li:hover + span{
+    opacity: .3;
+  }
+
+  .main{
+    padding-top: 68px;
   }
 
   section .contentSection{

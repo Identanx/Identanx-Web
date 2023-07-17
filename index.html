@@ -22,8 +22,18 @@
         <li><a href="index.html#project">Proyectos</a></li>
         <li><a href="index.html#contact">Contacto</a></li>
       </div>
-      <div class="menu-burger">
-      <img src="assets/menu-burger.svg" alt="">
+      <div class="menu-burger closed" id="menu-hamburguer"></div>
+      <div class="navegation-burger closed" id="navegation-burger">
+        <div class="content-navegation">
+          <li><a href="index.html#us">Acerca de nosotros</a></li>
+          <span>Acerca de nosotros</span>
+          <li><a href="index.html#services">Servicios</a></li>
+          <span>Servicios</span>
+          <li><a href="index.html#project">Proyectos</a></li>
+          <span>Proyectos</span>
+          <li><a href="index.html#contact">Contacto</a></li>
+          <span>Contacto</span>
+        </div>
       </div>
     </nav>
     <section class="main">
@@ -137,35 +147,6 @@
   </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  speed: 400,
-  direction: 'horizontal',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-
-  autoplay: {
-    delay: 5000,
-  }, 
-
-});
-</script>
+<script src="js/functions.js"></script>
 
 </html>
