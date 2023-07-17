@@ -140,6 +140,11 @@ section .contentServices{
 }
 
 section .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   width: 320px;
   height: 500px;
   margin: 30px 20px;
@@ -149,10 +154,22 @@ section .card{
   box-shadow: 5px 10px 10px 5px rgba(0,0,0,0.5);
 }
 
-section .card img{
+section .card .card-img{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  border-bottom: #6C63FF solid thick;
+}
+
+section .card .card-img img{
   width: 100%;
   padding: 40px;
-  border-bottom: medium solid #6C63FF;
+  height: 250px;
+}
+
+section .card .card-content{
+  position: absolute;
+  top: 280px;
 }
 
 section .card .title{
