@@ -26,6 +26,10 @@ const menu = document.getElementById('menu-hamburguer');
 const nav = document.getElementById('navegation-burger');
   
 menu.addEventListener('click', () => {
+  menuHamburguer()
+});
+
+const menuHamburguer = () => {
   if (menu.classList.contains('closed') || nav.classList.contains('closed')) {
     menu.classList.remove('closed');
     nav.classList.remove('closed');
@@ -39,7 +43,9 @@ menu.addEventListener('click', () => {
     menu.classList.add('closed');
     nav.classList.add('closed');
   }
-});
+}
+
+
 
 
 
