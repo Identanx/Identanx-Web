@@ -13,7 +13,7 @@ main{
 }
 
 main nav{
-  background: #6C63FF;
+  background: #7D0240;
 }
 
 main nav{
@@ -55,13 +55,14 @@ main nav .navegation li a{
 }
 
 main nav .navegation img{
-  width: 50px;
+  width: 100px;
+  background-color: #FEFEFE;
+  box-shadow: 5px 5px 2.5px 0px rgba(0,0,0,0.75);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 10px;
 }
 
 main .main{
-  background: linear-gradient(328.72deg, #FEFEFE 29.76%, #6C63FF 104.12%);
+  background: linear-gradient(328.72deg, #FEFEFE 29.76%, #7D0240 104.12%);
   height: 93vh;
 }
 
@@ -129,7 +130,7 @@ section .contentSection img{
 }
 
 section#services{
-  background: #6C63FF;
+  background: #7D0240;
   color: #FEFEFE;
 }
 
@@ -165,7 +166,7 @@ section .card .card-img{
   position: absolute;
   top: 0;
   z-index: 2;
-  border-bottom: #6C63FF solid thick;
+  border-bottom: #7D0240 solid thick;
 }
 
 section .card .card-img img{
@@ -181,7 +182,7 @@ section .card .card-content{
 }
 
 section .card .title{
-  color: #6C63FF;
+  color: #7D0240;
   font-size: 1.8em;
   font-weight: 600;
   display: block;
@@ -216,11 +217,11 @@ section .card .text{
 }
 
 .color-purple{
-  color: #6C63FF !important;
+  color: #7D0240 !important;
 }
 
 .bg-purple{
-  background-color:#6C63FF !important;
+  background-color:#7D0240 !important;
 }
 
 .swiper .containerText{ 
@@ -261,7 +262,7 @@ footer .bg-purple{
   width: 100%;
   height: 300px;
   bottom: 100%;
-  margin-top: -180px;
+  margin-top: -80px;
 }
 
 
@@ -329,8 +330,8 @@ footer .links a img{
     align-items: center;
     width: 100%;
     height: 100vh;
-    top: 68px;  
-    background-color: #6C63FF;
+    top: 58px;  
+    background-color: #7D0240;
     transition: 0.5s;
   }
 
